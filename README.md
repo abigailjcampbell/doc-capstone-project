@@ -1,1 +1,1 @@
-# doc-capstone-project
+# dsc-capstone-project
