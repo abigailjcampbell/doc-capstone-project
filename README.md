@@ -86,7 +86,7 @@ A photomectric system is a set of optical filters with known sensitivity to spec
 - g: green filter
 - r: red filter
 - i: near infrared filter
-- z: inframred filter
+- z: infrared filter
 
 Source: https://en.wikipedia.org/wiki/Photometric_system
 
