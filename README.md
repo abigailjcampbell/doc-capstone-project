@@ -150,7 +150,7 @@ Using this final model, we are able to accurately classify objects observed in t
 
 ### Repository Structure
     - images Folder: images used in this ReadMe
-    - data Folder: contains the original MovieLens data set .
+    - data Folder: contains the original Sloan Digital Sky Survey data set, as well as the results from several sections of the grid search.
     - pdfs Folder: contains the pdfs turned in as part of this project, including the presentation
     - data_analysis.ipynb: the jupyter notebook containing the primary analyses
     
