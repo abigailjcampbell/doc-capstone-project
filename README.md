@@ -129,11 +129,11 @@ The first neural network built consisted of one hidden layer, which also achieve
 The ranges of values selected for each parameter during hyperparamter tuning were permutated to produce all possible combinations of parameters to search for the combination that produces the highest possible precision. 
 
 The SVD Grid search optimal paramters produced the highest accuracy:
-    - number of layers = 3
-    - activation function = tanh
-    - batch size = 21
-    - epochs = 20
-    - l2 regularization = false
+- number of layers = 3
+- activation function = tanh
+- batch size = 21
+- epochs = 20
+- l2 regularization = false
 
 #### Final Model
 Using the parameters identified during the grid search, a final neural network was built and tested. The final model was able to achieve an accuracy of 97%. This indicates a small improvement from the base model, however since the orignal base model accuracy was so high, this is an acceptable amount of improvement. 
@@ -149,10 +149,10 @@ The final trained as a three layer neural network using normalized and resampled
 Using this final model, we are able to accurately classify objects observed in the night sky with an accuracy of 97%.
 
 ### Repository Structure
-    - images Folder: images used in this ReadMe
-    - data Folder: contains the original Sloan Digital Sky Survey data set, as well as the results from several sections of the grid search.
-    - pdfs Folder: contains the pdfs turned in as part of this project, including the presentation
-    - data_analysis.ipynb: the jupyter notebook containing the primary analyses
+- images Folder: images used in this ReadMe
+- data Folder: contains the original Sloan Digital Sky Survey data set, as well as the results from several sections of the grid search.
+- pdfs Folder: contains the pdfs turned in as part of this project, including the presentation
+- data_analysis.ipynb: the jupyter notebook containing the primary analyses
     
 ### Reproducibility
 In addition to this repository, the dataset and analysis are stored on a google drive. The analysis can be run via Google Colab by accessing this link:
