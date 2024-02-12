@@ -1,5 +1,5 @@
 # Stellar Object Classification
-![Alt text](images/hubble 2.png)
+![Alt text](images/hubble 2.jpeg)
 
 ## Project Overview
 
