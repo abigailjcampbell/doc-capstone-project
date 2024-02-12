@@ -1,14 +1,13 @@
 # Stellar Object Classification
+![Alt text](images/hubble 2.png)
 
 ## Project Overview
 
-This project uses a neural netowrk to classify observed stellar objects into one of three classes: Star, Galaxy, or Quassar.
-
-### Business Problem
+This project uses a neural netowrk to classify observed stellar objects into one of three classes: Star, Galaxy, or Quassar. Using the Sloan Digital Sky Survey, this model is trained to accurately identify objects observed in the night sky with 
 
 ### Identifying objects in the night sky
 
-As humans, we have been looking up at the night sky Identifying objects in the night sky for thousands of years. We have spent ages looking for patterns and making maps of the sky hoping to get a glimpse into the history of the universe through the stars. Our human eyes can see about 10,000 stars across the night sky, however telescopes have allowed us to see and measure thousands, if not millions more. As our ability to see and measure the universe grows, our ability to identify and classify the objects in our sky grows as well.
+As humans, we have been looking up at the night sky Identifying objects in the night sky for thousands of years. We have spent ages looking for patterns and making maps of the sky hoping to get a glimpse into the history of the universe through the stars. Our human eyes can see about 10,000 stars across the night sky, however telescopes have allowed us to see and measure thousands, if not millions more. As our ability to see and measure the universe grows, our ability to identify and classify the objects in our sky grows as well. 
 
 The goal of this project is to be able to identify the stellar classification of an object based on its measurements in an effort to expand our knowledge and keep us searching the sky for answers.
 
