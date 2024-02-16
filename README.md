@@ -51,13 +51,11 @@ The majority of objects observed were galaxies, with the remaining observations 
 The object location (from the vantage point of Earth) can be charted using two variables, alpha and delta.
 - Delta:
     - declination angle 
-    - equivalent to latitude, 
+    - equivalent to latitude
     - measuring the degrees from the earth's equator (horizon). The
-    - equator = 0 degrees
-    - poles = +- 90 degrees.
 - Alpha:
     - right ascension 
-    - east-west coordinate of the star, as 
+    - east-west coordinate of the star
     - measured by the angular distance east of the vernal equinox along the euquator.
     
 All coordinates are measured by the J2000 epoch (the location of the earth's axis on January 1, 2000 at 12pm TT)
@@ -110,17 +108,16 @@ Accuracy takes into account both false positives and false negatives by dividing
 
 ### Base Model: Decision Tree
 
-A base model was built in order to determine the baseline accuracy we can achieve with this dataset. The model used was a decision tree, and achieved an accuracy of 96%. This indicates that while there is some room for improvment, we should not expect any more that a 1-2% increase in accuracy.
-
-The confusion matrix shows that the decision tree was very good at distingushing stars from quasars, decent at distinguishing galaxies from stars, but not as good with galaxies vs quasars. 
+A base model was built in order to determine the baseline accuracy we can achieve with this dataset. The model used was a decision tree, and achieved an accuracy of 69%. This indicates that there is a wide opportunity for improvement.
 
 ![Alt text](images/decision_tree_cfn_mtx.png)
+The confusion matrix shows that the decision tree was unable to differentiate stars from quasars and galaxies, with a score of 0 across the board. This indicates the area with the most potential to improve. 
 
 ### Neural Netork
-A neural network was selected for the final model because....
+A neural network was selected for the final model for their ability to hand complex relationships between input and output variables.
 
 #### Single Layer Neural Netork
-The first neural network built consisted of one hidden layer, which also achieved an accuracy of 96%
+The first neural network built consisted of one hidden layer, which also achieved an accuracy of 92%
 
 ![Alt text](images/nn_1_cfn_mtx.png)
 
@@ -128,24 +125,27 @@ The first neural network built consisted of one hidden layer, which also achieve
 The ranges of values selected for each parameter during hyperparamter tuning were permutated to produce all possible combinations of parameters to search for the combination that produces the highest possible precision. 
 
 The SVD Grid search optimal paramters produced the highest accuracy:
-- number of layers = 3
+- number of layers = 2
 - activation function = tanh
 - batch size = 21
-- epochs = 20
+- epochs = 15
 - l2 regularization = false
 
 #### Final Model
-Using the parameters identified during the grid search, a final neural network was built and tested. The final model was able to achieve an accuracy of 97%. This indicates a small improvement from the base model, however since the orignal base model accuracy was so high, this is an acceptable amount of improvement. 
+Using the parameters identified during the grid search, a final neural network was built and tested. The final model was able to achieve an accuracy of 93%. This indicates a large improvement from the base model. The final model gained the ability to identify stars, where the base model was unable to.
 
 ##### Final Model Confusion Matrix
 ![Alt text](images/final_cfn_mtx.png)
-We can see that the final model is better at distinguishing galaxies from quasars than be base model, and the expense of a few more galaxies and quasars being mis-identified as stars.
+We can see that the final model is better at distinguishing stars from quasars and galaxies than the single layer newural netowrk, and the expense of a few more galaxies being mis-identified as quasars.
 
+## Feature Importance
+![Alt text](images/feature_importance.png)
+The most important features appear to be measurements made on the objects themselves, rather than information about it's location and equipment used to observe it. The most important feature is redshift, followed by the five light filters. Galaxies and Quasars appear to rely more on light filters than stars, which reliec mostly on redshift. 
 
 ## Conclusion
-The final trained as a three layer neural network using normalized and resampled data and optimized using a grid search of parameters. Early Stopping was employed to mitigate overfitting.
+The final model was trained as a two layer neural network using normalized and resampled data and optimized using a grid search of parameters. Early Stopping was employed to mitigate overfitting. Using this final model, we are able to accurately classify objects observed in the night sky with an accuracy of 93%.
 
-Using this final model, we are able to accurately classify objects observed in the night sky with an accuracy of 97%.
+Finally, the top three most important features in classifying stellar objects are reshift, the green filter, and the near infrared filter, with the other filters following close behind. Focusing future models adjustments on these features will bring the most model improvement.
 
 ### Repository Structure
 - images Folder: images used in this ReadMe
