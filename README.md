@@ -3,7 +3,9 @@
 
 ## Project Overview
 
-This project uses a neural netowrk to classify observed stellar objects into one of three classes: Star, Galaxy, or Quassar. Using the Sloan Digital Sky Survey, this model is trained to accurately identify objects observed in the night sky with 
+This project uses a neural netowrk to classify observed stellar objects into one of three classes: Star, Galaxy, or Quassar. Using the Sloan Digital Sky Survey, this model is trained to accurately identify objects observed in the night sky.
+
+A presentation of the results can be found in /pdfs/Final_Presentation_ACampbell.pdf
 
 ### Identifying objects in the night sky
 
