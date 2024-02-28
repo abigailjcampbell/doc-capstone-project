@@ -35,7 +35,7 @@ This dataset describes the classification of thousands of observations of stella
 
 
 The data used in the project is a rating data sets published on the Kaggle website:
-(https://www.kaggle.com/code/farazrahman/predicting-star-galaxy-quasar-with-svm)
+(https://www.kaggle.com/datasets/lucidlenn/sloan-digital-sky-survey)
 The data was collected by the Sloan Digital Sky Survey.
 
 The data is contained in the file:
